@@ -1,0 +1,14 @@
+{
+  "name": "example-dep-repo-js",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal JS dependency tree with one package appearing in two versions",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ansi-styles": "6.2.3",
+    "chalk": "4.1.2"
+  }
+}
