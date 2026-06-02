@@ -7,6 +7,8 @@ Python:
 - `uv.lock`
 - `main.py`
 
+`main.py` includes tiny examples for `polars` and `pydantic`.
+
 JavaScript:
 - `package.json`
 - `package-lock.json`

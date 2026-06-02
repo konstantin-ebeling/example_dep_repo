@@ -5,7 +5,13 @@ from tempfile import NamedTemporaryFile
 # from airflow import DAG
 # from airflow.providers.standard.operators.empty import EmptyOperator
 import polars as pl
+from pydantic import BaseModel
 # import pycurl
+
+
+class PackageExample(BaseModel):
+    package: str
+    used: bool
 
 
 def main():
@@ -21,11 +27,14 @@ def main():
 
     frame = pl.DataFrame(
         {
-            "package": ["polars", "pycurl", "apache-airflow"],
-            "used": [True, True, True],
+            "package": ["polars", "pycurl", "pydantic", "apache-airflow"],
+            "used": [True, True, True, True],
         }
     )
     print(frame)
+
+    example = PackageExample.model_validate({"package": "pydantic", "used": True})
+    print(example.model_dump())
     # print(f"airflow dag: {dag.dag_id} ({len(dag.tasks)} tasks)")
 
     # with NamedTemporaryFile("w", delete=False) as tmp:
