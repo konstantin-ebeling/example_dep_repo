@@ -3,9 +3,9 @@ name = "example-dep-repo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
  "polars>=1.40.1",
  "pycurl>=7.46.0",
- "pydantic===1.10.14",
+ "pydantic===2.0.0",
 ]
